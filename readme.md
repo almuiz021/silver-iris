@@ -1,6 +1,4 @@
-# Simple Tailwind CSS Starter
-
-This is an extremley simple setup to develop Tailwind projects. This will be used in my Tailwind From Scratch course.
+# Silver Iris
 
 ## Usage
 
@@ -27,5 +25,3 @@ To build once, run
 ```
 npm run build
 ```
-
-You only need to deploy your html files and css/style.css
