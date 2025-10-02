@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.js"></script>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+    <title>Simple Tailwind Starter</title>
+  </head>
+  <body class="gridcontainer relative">
+    <!-- //VIDEO SCRIPT  -->
+    <script>
+      [...document.body.querySelectorAll('*')].forEach(el => {
+        if (el.scrollWidth > document.documentElement.clientWidth) {
+          console.log('Overflowing element:', el);
+        }
+      });
+    </script>
+    <section class="bg-video">
+      <video
+        class="bg-video__content"
+        autoplay
+        muted
+        loop
+      >
+        <source
+          src="img/video3.mp4"
+          type="video/mp4"
+        />
+        Browser Not Supported!
+      </video>
+    </section>
+
+    <!-- //ANNOUNCEMENT BAR -->
+    <section class="col-span-full md:block hidden">
+      <article
+        class="bg-primary text-white px-4 lg:px-32 text-sm py-1 flex justify-between items-center"
+      >
+        <p>Contact Us : 0761-8523-398</p>
+        <div class="flex gap-3">
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-2 scale-75"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook-icon lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-2 scale-75"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram-icon lucide-instagram"
+            >
+              <rect
+                width="20"
+                height="20"
+                x="2"
+                y="2"
+                rx="5"
+                ry="5"
+              />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line
+                x1="17.5"
+                x2="17.51"
+                y1="6.5"
+                y2="6.5"
+              />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-2 scale-75"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-youtube-icon lucide-youtube"
+            >
+              <path
+                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+              />
+              <path d="m10 15 5-3-5-3z" />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-2 scale-75"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="24"
+              height="24"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 30 30"
+            >
+              <path
+                d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- //NAVBAR -->
+    <section
+      class="col-span-full sticky top-0 z-50 sm:bg-white bg-primary border-b shadow-sm"
+    >
+      <nav
+        class="max-w-[1440px] mx-auto flex items-center justify-between px-4 sm:px-8 py-3"
+      >
+        <!-- Logo -->
+        <div class="flex items-center scale-90 sm:scale-100">
+          <img
+            class="h-14 object-contain sm:block hidden"
+            src="/img/Logo.png"
+            alt="Silver Iris Logo"
+          />
+          <img
+            class="sm:hidden h-16 object-contain"
+            src="img/footerlogo.png"
+            alt="Logo"
+          />
+        </div>
+
+        <!-- Hamburger Icon (Mobile Only) -->
+        <button
+          id="mobile-menu-toggle"
+          class="sm:hidden text-primary hover:text-white hover:bg-secondary bg-white p-2 rounded"
+          aria-label="Toggle menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden sm:flex items-center gap-6 font-poppins">
+          <ul class="flex gap-6 text-sm text-primary uppercase">
+            <li>
+              <a
+                href="/"
+                class="hover:text-secondary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/"
+                class="hover:text-secondary"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/"
+                class="hover:text-secondary"
+                >Packages</a
+              >
+            </li>
+            <li>
+              <a
+                href="/"
+                class="hover:text-secondary"
+                >Cottages</a
+              >
+            </li>
+            <li>
+              <a
+                href="/"
+                class="hover:text-secondary"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <button
+            class="bg-secondary px-5 py-2 text-white uppercase flex items-center gap-2 text-sm"
+          >
+            <span class="block">Book Your Stay</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-move-right-icon lucide-move-right"
+            >
+              <path d="M18 8L22 12L18 16" />
+              <path d="M2 12H22" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 flex flex-col hidden items-center justify-evenly gap-6 bg-primary text-white z-[99] transition-opacity duration-300"
+      >
+        <!-- Close Button -->
+        <button
+          id="close-mobile-menu"
+          class="absolute top-4 left-4 p-2 text-white hover:bg-secondary rounded"
+          aria-label="Close menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+
+        <!-- Navigation Links -->
+        <a
+          href="/"
+          class="uppercase text-lg hover:text-secondary"
+          >Home</a
+        >
+        <a
+          href="/"
+          class="uppercase text-lg hover:text-secondary"
+          >About</a
+        >
+        <a
+          href="/"
+          class="uppercase text-lg hover:text-secondary"
+          >Packages</a
+        >
+        <a
+          href="/"
+          class="uppercase text-lg hover:text-secondary"
+          >Cottages</a
+        >
+        <a
+          href="/"
+          class="uppercase text-lg hover:text-secondary"
+          >Contact</a
+        >
+
+        <div class="flex gap-3">
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-2 scale-75"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook-icon lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-2 scale-75"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram-icon lucide-instagram"
+            >
+              <rect
+                width="20"
+                height="20"
+                x="2"
+                y="2"
+                rx="5"
+                ry="5"
+              />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line
+                x1="17.5"
+                x2="17.51"
+                y1="6.5"
+                y2="6.5"
+              />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-2 scale-75"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-youtube-icon lucide-youtube"
+            >
+              <path
+                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+              />
+              <path d="m10 15 5-3-5-3z" />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-2 scale-75"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="24"
+              height="24"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 30 30"
+            >
+              <path
+                d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const toggleBtn = document.getElementById('mobile-menu-toggle');
+          const closeBtn = document.getElementById('close-mobile-menu');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+          });
+
+          closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      </script>
+    </section>
+
+    <!-- //HERO SECTION -->
+    <section
+      class="col-span-full h-[100vh] flex items-center justify-center relative px-4"
+    >
+      <div
+        class="flex flex-col text-center items-center mt-12 max-w-3xl w-full"
+      >
+        <!-- Subheading -->
+        <p
+          class="text-secondary font-thin text-xs sm:text-sm md:text-base uppercase mb-2 leading-6 tracking-[0.2rem]"
+        >
+          FEATURED COTTAGES
+        </p>
+
+        <!-- Main Heading -->
+        <h1
+          class="md:text-black text-white font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+        >
+          Welcome to Your Silver Iris
+        </h1>
+
+        <!-- Description -->
+        <p
+          class="md:text-black text-white mt-4 text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-6"
+        >
+          Our Nature Cottage is a serene escape designed to offer you a peaceful
+          retreat from the hustle and bustle of everyday life.
+        </p>
+
+        <!-- Optional Divider Line -->
+        <div
+          class="bg-black h-12 w-[2px] hidden sm:block rounded-[1px] text-center mt-6"
+        ></div>
+
+        <!-- Scroll Arrow Button
+        <a
+          href="/"
+          class="bg-secondary rounded-full w-14 h-14 sm:w-16 sm:h-16 hidden sm:flex absolute bottom-0 translate-y-[50%] items-center justify-center text-black z-10"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-chevron-down"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </a> -->
+      </div>
+    </section>
+
+    <!-- //FEATURE -->
+
+    <section
+      class="col-span-full featurebgm mt-8 relative flex flex-col md:flex-row md:px-32 px-6 sm:px-8 md:py-44 py-10 gap-8 sm:gap-10 md:ml-16 md:mr-32"
+    >
+      <!-- Image & Offset Border -->
+      <div
+        class="relative basis-full md:basis-[35%] flex items-center justify-center p-2 sm:p-4"
+      >
+        <!-- Image Layer -->
+        <div class="relative z-30">
+          <!-- Desktop Image -->
+          <img
+            class="hidden md:block w-full max-w-xs sm:max-w-sm object-contain"
+            src="/img/featimg-1.png"
+            alt="Featured Image"
+          />
+          <!-- Mobile Image -->
+          <img
+            class="w-full md:hidden max-w-xs sm:max-w-sm object-contain"
+            src="/img/mobilesec2.png"
+            alt="Featured Image"
+          />
+        </div>
+
+        <!-- Offset Border Behind -->
+        <div
+          class="absolute hidden md:block top-0 left-0 w-full scale-90 h-full border-4 border-secondary z-10 -translate-x-10 translate-y-10 pointer-events-none"
+        ></div>
+      </div>
+
+      <!-- Text Content -->
+      <div
+        class="basis-full md:basis-[65%] flex flex-col max-w-5xl items-start"
+      >
+        <div class="mb-4">
+          <img
+            src="/img/featcrown.png"
+            alt="Feat Crown"
+          />
+        </div>
+
+        <p
+          class="text-secondary font-thin text-xs sm:text-sm uppercase leading-6 sm:leading-7 tracking-widest"
+        >
+          FEATURED COTTAGES
+        </p>
+
+        <!-- Title -->
+        <h2
+          class="text-2xl sm:text-4xl md:text-5xl font-thin my-3 font-serif leading-tight text-black"
+        >
+          Beautiful & Comfortable Cottages
+        </h2>
+
+        <!-- Description -->
+        <p
+          class="text-sm sm:text-base tracking-wide leading-relaxed w-full text-gray-800"
+        >
+          Our living areas are designed for relaxation and quality time with
+          loved ones. Spacious and inviting, these areas feature comfortable
+          furnishings, a cozy fireplace, and large windows that offer beautiful
+          views. Our living areas are designed for relaxation and quality time
+          with loved ones. Spacious and inviting, these areas feature
+          comfortable furnishings, a cozy fireplace, and large windows that
+          offer beautiful views.
+        </p>
+
+        <!-- Feature Icons -->
+        <div
+          class="flex my-6 sm:my-4 py-4 border-b border-gray-200 gap-8 sm:gap-16"
+        >
+          <div class="flex gap-3 items-center">
+            <img
+              class="h-10 sm:h-12"
+              src="/img/featresto.png"
+              alt="Best Restaurants"
+            />
+            <p class="text-sm sm:text-base">
+              <span class="block">The Best</span>
+              <span class="block">Restaurants</span>
+            </p>
+          </div>
+          <div class="flex gap-3 items-center">
+            <img
+              class="h-10 sm:h-12"
+              src="/img/featctail.png"
+              alt="Best Cocktail Bar"
+            />
+            <p class="text-sm sm:text-base">
+              <span class="block">The Best</span>
+              <span class="block">Cocktail Bar</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div
+          class="flex flex-col sm:flex-row gap-6 sm:gap-10 items-start sm:items-center"
+        >
+          <button
+            class="bg-secondary px-6 py-2 text-white uppercase text-sm tracking-wide flex items-center gap-2"
+          >
+            <span>Book Your Stay</span>
+          </button>
+
+          <!-- Contact Info -->
+          <div class="flex gap-3 items-center">
+            <img
+              class="h-10 sm:h-12"
+              src="/img/feattime.png"
+              alt="Booking Time"
+            />
+            <p class="text-sm sm:text-base flex flex-col leading-tight">
+              <span class="tracking-wide">Booking Now</span>
+              <span class="tracking-wider text-base sm:text-lg">123456789</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative Leaf -->
+      <div class="absolute hidden md:block right-7 top-7">
+        <img
+          class="scale-90"
+          src="/img/featuredleaf.png"
+          alt="Leaf"
+        />
+      </div>
+    </section>
+
+    <!-- //FEATS SLIDER -->
+    <section
+      class="flex bg-primary md:bg-transparent col-span-full md:flex-row flex-col"
+    >
+      <!-- Red: 30% -->
+      <div
+        class="roomsbgm basis-[35%] flex justify-center md:my-32 mt-8 md:mx-0 sm:mx-16 my-0"
+      >
+        <div
+          class="text-white md:text-black md:mx-16 mx-6 flex flex-col items-center md:items-stretch"
+        >
+          <div class="mb-4">
+            <img
+              src="/img/featcrown.png"
+              alt="Feat Crown"
+            />
+          </div>
+          <p class="titleprefix">FEATURED COTTAGES</p>
+          <h2 class="text-3xl font-thin my-3 font-serif">
+            Our Featured Reassert
+          </h2>
+          <p class="tracking-[0.1em] text-sm leading-[1.5] w-full">
+            Our living areas are designed for relaxation and quality time with
+            loved ones. Spacious and inviting, these areas feature comfortable
+            furnishings, a cozy fireplace, and large windows that
+          </p>
+          <button class="bg-secondary px-10 text-white w-max py-2 text-sm mt-6">
+            Explore All
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="basis-[65%] bg-primary md:overflow-hidden text-white mx-auto md:py-16"
+      >
+        <div
+          class="hidden md:flex border-t-2 border-secondary w-[85%] max-w-[90vvw] gap-6 py-8 justify-end mt-6"
+        >
+          <p class="ml-auto max-w-md pl-6">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when
+          </p>
+          <div class="flex items-center justify-center gap-3">
+            <button
+              id="prev"
+              class="bg-white text-secondary hover:bg-secondary hover:text-white px-3 py-2 shadow text-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-move-left-icon lucide-move-left"
+              >
+                <path d="M6 8L2 12L6 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </button>
+            <button
+              id="next"
+              class="bg-white text-secondary hover:bg-secondary hover:text-white px-3 py-2 shadow text-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-move-right-icon lucide-move-right"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="relative w-full max-w-[80vw] md:mx-auto h-fit mt-10 bg-primary md:ml-16 mx-6"
+        >
+          <div
+            id="my-slider"
+            class="keen-slider text-black items-center"
+          >
+            <div
+              class="keen-slider__slide bg-white md:scale-75 md:w-full max-w-[70vw] h-full"
+            >
+              <div class="flex flex-col items-center">
+                <img
+                  class="object-cover md:object-contain md:max-h-full max-h-[350px] w-full"
+                  src="img/slide1.png"
+                  alt=""
+                />
+                <div
+                  class="border text-xs text-black gap-3 text-center min-w-[80%] bg-white -translate-y-[50%] md:justify-between justify-around flex py-2 px-8"
+                >
+                  <p class="flex gap-2 items-center justify-center">
+                    <img
+                      class="scale-95"
+                      src="/img/Vector.svg"
+                      alt=""
+                    />
+                    <span class="whitespace-nowrap">2 Double Beds</span>
+                  </p>
+                  <p class="flex gap-2">
+                    <img
+                      class="scale-95"
+                      src="/img/metric.svg"
+                      alt=""
+                    />
+                    <span>30 Sqm</span>
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="text-center flex flex-col gap-3 px-5 -mt-3 bg-white text-black"
+              >
+                <h3 class="text-xl">Double Room</h3>
+                <p class="text-sm">
+                  Explore off-the-beaten-path adventures and create
+                  unforgettable memories just minutes from your doorstep.
+                </p>
+                <div class="flex justify-between items-center my-3">
+                  <button
+                    class="text-xs open-modal flex items-center justify-center gap-2"
+                    data-content='
+<h3>Room No 1 Features</h3>
+    <ul style="text-align: left; list-style: disc; padding-left: 1.5rem;">
+      <li><strong>Room Size:</strong> 30 sqm</li>
+      <li><strong>Beds:</strong> 2 Double Beds</li>
+      <li><strong>View:</strong> Garden / Pool / City View</li>
+      <li><strong>Max Occupancy:</strong> 4 Adults or 2 Adults + 2 Children</li>
+      <li><strong>Amenities Included:</strong></li>
+      <li>Free WiFi</li>
+      <li>Air Conditioning</li>
+      <li>Flat-screen TV with satellite channels</li>
+      <li>Work desk & chair</li>
+      <li>Wardrobe & luggage rack</li>
+      <li>In-room safe</li>
+      <li>Coffee & tea making facilities</li>
+      <li>Mini fridge</li>
+      <li>Ensuite bathroom with shower & toiletries</li>
+      <li>Daily housekeeping</li>
+    </ul>
+  '
+                  >
+                    <span>Details</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </button>
+                  <button
+                    class="border-y-[1px] border-secondary text-secondary text-sm flex gap-2 items-center justify-center py-2 px-3"
+                  >
+                    <span class="italic"> Book Stay </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="keen-slider__slide bg-white md:scale-75 md:w-full max-w-[70vw] h-full"
+            >
+              <div class="flex flex-col items-center">
+                <img
+                  class="object-cover md:object-contain md:max-h-full max-h-[350px] w-full"
+                  src="img/slide1.png"
+                  alt=""
+                />
+                <div
+                  class="border text-xs text-black gap-3 text-center min-w-[80%] bg-white -translate-y-[50%] md:justify-between justify-around flex py-2 px-8"
+                >
+                  <p class="flex gap-2 items-center justify-center">
+                    <img
+                      class="scale-95"
+                      src="/img/Vector.svg"
+                      alt=""
+                    />
+                    <span class="whitespace-nowrap">2 Double Beds</span>
+                  </p>
+                  <p class="flex gap-2">
+                    <img
+                      class="scale-95"
+                      src="/img/metric.svg"
+                      alt=""
+                    />
+                    <span>30 Sqm</span>
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="text-center flex flex-col gap-3 px-5 -mt-3 bg-white text-black"
+              >
+                <h3 class="text-xl">Double Room</h3>
+                <p class="text-sm">
+                  Explore off-the-beaten-path adventures and create
+                  unforgettable memories just minutes from your doorstep.
+                </p>
+                <div class="flex justify-between items-center my-3">
+                  <button
+                    class="text-xs open-modal flex items-center justify-center gap-2"
+                    data-content='
+<h3>Room No 1 Features</h3>
+    <ul style="text-align: left; list-style: disc; padding-left: 1.5rem;">
+      <li><strong>Room Size:</strong> 30 sqm</li>
+      <li><strong>Beds:</strong> 2 Double Beds</li>
+      <li><strong>View:</strong> Garden / Pool / City View</li>
+      <li><strong>Max Occupancy:</strong> 4 Adults or 2 Adults + 2 Children</li>
+      <li><strong>Amenities Included:</strong></li>
+      <li>Free WiFi</li>
+      <li>Air Conditioning</li>
+      <li>Flat-screen TV with satellite channels</li>
+      <li>Work desk & chair</li>
+      <li>Wardrobe & luggage rack</li>
+      <li>In-room safe</li>
+      <li>Coffee & tea making facilities</li>
+      <li>Mini fridge</li>
+      <li>Ensuite bathroom with shower & toiletries</li>
+      <li>Daily housekeeping</li>
+    </ul>
+  '
+                  >
+                    <span>Details</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </button>
+                  <button
+                    class="border-y-[1px] border-secondary text-secondary text-sm flex gap-2 items-center justify-center py-2 px-3"
+                  >
+                    <span class="italic"> Book Stay </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="keen-slider__slide bg-white md:scale-75 md:w-full max-w-[70vw] h-full"
+            >
+              <div class="flex flex-col items-center">
+                <img
+                  class="object-cover md:object-contain md:max-h-full max-h-[350px] w-full"
+                  src="img/slide1.png"
+                  alt=""
+                />
+                <div
+                  class="border text-xs text-black gap-3 text-center min-w-[80%] bg-white -translate-y-[50%] md:justify-between justify-around flex py-2 px-8"
+                >
+                  <p class="flex gap-2 items-center justify-center">
+                    <img
+                      class="scale-95"
+                      src="/img/Vector.svg"
+                      alt=""
+                    />
+                    <span class="whitespace-nowrap">2 Double Beds</span>
+                  </p>
+                  <p class="flex gap-2">
+                    <img
+                      class="scale-95"
+                      src="/img/metric.svg"
+                      alt=""
+                    />
+                    <span>30 Sqm</span>
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="text-center flex flex-col gap-3 px-5 -mt-3 bg-white text-black"
+              >
+                <h3 class="text-xl">Double Room</h3>
+                <p class="text-sm">
+                  Explore off-the-beaten-path adventures and create
+                  unforgettable memories just minutes from your doorstep.
+                </p>
+                <div class="flex justify-between items-center my-3">
+                  <button
+                    class="text-xs open-modal flex items-center justify-center gap-2"
+                    data-content='
+<h3>Room No 1 Features</h3>
+    <ul style="text-align: left; list-style: disc; padding-left: 1.5rem;">
+      <li><strong>Room Size:</strong> 30 sqm</li>
+      <li><strong>Beds:</strong> 2 Double Beds</li>
+      <li><strong>View:</strong> Garden / Pool / City View</li>
+      <li><strong>Max Occupancy:</strong> 4 Adults or 2 Adults + 2 Children</li>
+      <li><strong>Amenities Included:</strong></li>
+      <li>Free WiFi</li>
+      <li>Air Conditioning</li>
+      <li>Flat-screen TV with satellite channels</li>
+      <li>Work desk & chair</li>
+      <li>Wardrobe & luggage rack</li>
+      <li>In-room safe</li>
+      <li>Coffee & tea making facilities</li>
+      <li>Mini fridge</li>
+      <li>Ensuite bathroom with shower & toiletries</li>
+      <li>Daily housekeeping</li>
+    </ul>
+  '
+                  >
+                    <span>Details</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </button>
+                  <button
+                    class="border-y-[1px] border-secondary text-secondary text-sm flex gap-2 items-center justify-center py-2 px-3"
+                  >
+                    <span class="italic"> Book Stay </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            id="prev2"
+            class="absolute left-0 top-1/2 -translate-x-1/2 scale-50 md:scale-100 -translate-y-1/2 bg-secondary w-16 h-16 rounded-full text-white hover:bg-white hover:text-secondary shadow flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-left-icon lucide-chevron-left"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <button
+            id="next2"
+            class="absolute scale-50 md:scale-100 right-0 top-1/2 translate-x-1/2 -translate-y-1/2 bg-secondary w-16 h-16 rounded-full text-white hover:bg-white hover:text-secondary rotate-180 shadow flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-left-icon lucide-chevron-left"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="dots"
+          class="flex mb-6 justify-center md:hidden gap-2 mt-6"
+        ></div>
+
+        <!-- Keen Slider JS -->
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const slider = new KeenSlider('#my-slider', {
+              loop: true,
+              mode: 'snap',
+              slides: {
+                perView: 1,
+                spacing: 16,
+              },
+              breakpoints: {
+                '(min-width: 768px)': {
+                  slides: {
+                    perView: 2,
+                    spacing: 20,
+                  },
+                },
+                '(min-width: 1024px)': {
+                  slides: {
+                    perView: 2.6,
+                    spacing: 24,
+                  },
+                },
+              },
+              created(sliderInstance) {
+                const dotContainer = document.getElementById('dots');
+
+                // Clear existing dots
+                dotContainer.innerHTML = '';
+
+                // Add new dots
+                for (
+                  let i = 0;
+                  i < sliderInstance.track.details.slides.length;
+                  i++
+                ) {
+                  const dot = document.createElement('button');
+                  dot.className =
+                    'w-2 h-2 rounded-full bg-white/30 hover:bg-white transition-all';
+                  dot.addEventListener('click', () =>
+                    sliderInstance.moveToIdx(i),
+                  );
+                  dotContainer.appendChild(dot);
+                }
+
+                // Update active dot
+                updateActiveDot(sliderInstance);
+                sliderInstance.on('slideChanged', () =>
+                  updateActiveDot(sliderInstance),
+                );
+              },
+            });
+
+            function updateActiveDot(sliderInstance) {
+              const dots = document.querySelectorAll('#dots button');
+              dots.forEach((dot, idx) => {
+                if (idx === sliderInstance.track.details.rel) {
+                  dot.classList.add('bg-secondary');
+                  dot.classList.remove('bg-white/30');
+                } else {
+                  dot.classList.remove('bg-secondary');
+                  dot.classList.add('bg-white/30');
+                }
+              });
+            }
+
+            // Nav buttons
+            document
+              .getElementById('prev')
+              .addEventListener('click', () => slider.prev());
+            document
+              .getElementById('prev2')
+              .addEventListener('click', () => slider.prev());
+            document
+              .getElementById('next')
+              .addEventListener('click', () => slider.next());
+            document
+              .getElementById('next2')
+              .addEventListener('click', () => slider.next());
+          });
+        </script>
+      </div>
+    </section>
+
+    <section
+      class="centergrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center py-8 md:py-16 lg:py-32 facilitiesbgm mx-4"
+    >
+      <div
+        class="col-span-1 md:col-span-2 lg:col-start-2 lg:col-span-1 place-items-center mb-8 md:mb-12 lg:mb-16"
+      >
+        <div>
+          <img
+            src="/img/featcrown.png"
+            alt="Feat Crown"
+            class="w-16 md:w-20 lg:w-24 mx-auto"
+          />
+        </div>
+        <p class="titleprefix text-sm md:text-base lg:text-lg">Our Service</p>
+        <h2
+          class="font-serif text-3xl md:text-4xl lg:text-5xl mt-2 md:mt-3 font-extralight"
+        >
+          Our Facilities
+        </h2>
+      </div>
+
+      <div class="col-start-1 h-max flex pl-4 md:pl-6 border-2 p-2">
+        <div class="flex flex-col font-serif justify-between">
+          <h2 class="text-xl md:text-2xl lg:text-3xl my-auto">
+            Pick Up & Drop
+          </h2>
+          <p class="text-sm md:text-base lg:text-lg my-auto">
+            We’ll pick up from airport while you comfy on your ride, mus
+            pellentesque habitant.
+          </p>
+        </div>
+        <div class="flex flex-col justify-between">
+          <div class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+            <img
+              src="/img/facilitycard.png"
+              alt="Facility Card"
+              class="block"
+            />
+          </div>
+          <div class="p-2 md:p-3 mb-4 md:mb-5">
+            <img
+              src="/img/location.png"
+              alt="Location"
+              class="block w-8 md:w-10 lg:w-12"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-start-1 md:col-start-2 lg:col-start-2 h-max flex pl-4 md:pl-6 border-2 p-2"
+      >
+        <div class="flex flex-col font-serif justify-between">
+          <h2 class="text-xl md:text-2xl lg:text-3xl my-auto">Parking Space</h2>
+          <p class="text-sm md:text-base lg:text-lg my-auto">
+            We’ll pick up from airport while you comfy on your ride, mus
+            pellentesque habitant.
+          </p>
+        </div>
+        <div class="flex flex-col justify-between">
+          <div class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+            <img
+              src="/img/facilitycard.png"
+              alt="Facility Card"
+              class="block"
+            />
+          </div>
+          <div class="p-2 md:p-3 mb-4 md:mb-5">
+            <img
+              src="/img/parking.png"
+              alt="Location"
+              class="block w-8 md:w-10 lg:w-12"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-start-1 md:col-start-1 lg:col-start-3 h-max flex pl-4 md:pl-6 border-2 p-2"
+      >
+        <div class="flex flex-col font-serif justify-between">
+          <h2 class="text-xl md:text-2xl lg:text-3xl my-auto">Room Service</h2>
+          <p class="text-sm md:text-base lg:text-lg my-auto">
+            We’ll pick up from airport while you comfy on your ride, mus
+            pellentesque habitant.
+          </p>
+        </div>
+        <div class="flex flex-col justify-between">
+          <div class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+            <img
+              src="/img/facilitycard.png"
+              alt="Facility Card"
+              class="block"
+            />
+          </div>
+          <div class="p-2 md:p-3 mb-4 md:mb-5">
+            <img
+              src="/img/roomservice.png"
+              alt="Location"
+              class="block w-8 md:w-10 lg:w-12"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-start-1 md:col-start-2 lg:col-start-1 h-max flex pl-4 md:pl-6 border-2 p-2"
+      >
+        <div class="flex flex-col font-serif justify-between">
+          <h2 class="text-xl md:text-2xl lg:text-3xl my-auto">Swimming Pool</h2>
+          <p class="text-sm md:text-base lg:text-lg my-auto">
+            We’ll pick up from airport while you comfy on your ride, mus
+            pellentesque habitant.
+          </p>
+        </div>
+        <div class="flex flex-col justify-between">
+          <div class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+            <img
+              src="/img/facilitycard.png"
+              alt="Facility Card"
+              class="block"
+            />
+          </div>
+          <div class="p-2 md:p-3 mb-4 md:mb-5">
+            <img
+              src="/img/swimmingpool.png"
+              alt="Location"
+              class="block w-8 md:w-10 lg:w-12"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-start-1 md:col-start-1 lg:col-start-2 h-max flex pl-4 md:pl-6 border-2 p-2"
+      >
+        <div class="flex flex-col font-serif justify-between">
+          <h2 class="text-xl md:text-2xl lg:text-3xl my-auto">
+            Fibre Internet
+          </h2>
+          <p class="text-sm md:text-base lg:text-lg my-auto">
+            We’ll pick up from airport while you comfy on your ride, mus
+            pellentesque habitant.
+          </p>
+        </div>
+        <div class="flex flex-col justify-between">
+          <div class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+            <img
+              src="/img/facilitycard.png"
+              alt="Facility Card"
+              class="block"
+            />
+          </div>
+          <div class="p-2 md:p-3 mb-4 md:mb-5">
+            <img
+              src="/img/internet.png"
+              alt="Location"
+              class="block w-8 md:w-10 lg:w-12"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-start-1 md:col-start-2 lg:col-start-3 h-max flex pl-4 md:pl-6 border-2 p-2"
+      >
+        <div class="flex flex-col font-serif justify-between">
+          <h2 class="text-xl md:text-2xl lg:text-3xl my-auto">Breakfast</h2>
+          <p class="text-sm md:text-base lg:text-lg my-auto">
+            We’ll pick up from airport while you comfy on your ride, mus
+            pellentesque habitant.
+          </p>
+        </div>
+        <div class="flex flex-col justify-between">
+          <div class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+            <img
+              src="/img/facilitycard.png"
+              alt="Facility Card"
+              class="block"
+            />
+          </div>
+          <div class="p-2 md:p-3 mb-4 md:mb-5">
+            <img
+              src="/img/breakfast.png"
+              alt="Location"
+              class="block w-8 md:w-10 lg:w-12"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="centergrid grid grid-cols-1 gap-4 items-center pb-8 md:pb-16 lg:pb-32 mt-5 md:-mt-5"
+    >
+      <div class="col-span-full place-items-center mb-8 md:mb-12 lg:mb-16">
+        <div>
+          <img
+            src="/img/featcrown.png"
+            alt="Feat Crown"
+            class="w-16 md:w-20 lg:w-24 mx-auto"
+          />
+        </div>
+        <p class="titleprefix text-sm md:text-base lg:text-lg">
+          What People says
+        </p>
+        <h2
+          class="font-serif text-3xl md:text-4xl lg:text-5xl mt-2 md:mt-3 font-extralight"
+        >
+          Words Of Our Guest
+        </h2>
+      </div>
+
+      <div class="col-span-full">
+        <div class="relative mx-16 sm:mx-4">
+          <div
+            id="my-slider-test"
+            class="keen-slider items-center"
+          >
+            <div class="keen-slider__slide">
+              <div class="w-[90%] mx-auto">
+                <img
+                  src="/img/testimonialscrownblack.png"
+                  alt="Feat Crown"
+                  class="w-12 md:w-16 lg:w-20 mx-auto"
+                />
+              </div>
+              <div class="border-2 bg-secondary_light p-3 md:p-4 lg:p-5">
+                <div class="flex gap-4 md:gap-6 py-2 items-center my-2">
+                  <img
+                    class="rounded-full w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+                    src="/img/testimonialprofile.png"
+                    alt="Person 1"
+                  />
+                  <p>
+                    <span
+                      class="block font-semibold font-serif text-base md:text-lg lg:text-xl"
+                      >Mike Taylor</span
+                    >
+                    <span
+                      class="block tracking-wider leading-6 md:leading-7 lg:leading-8 text-sm md:text-base"
+                      >Lahore, Pakistan</span
+                    >
+                  </p>
+                </div>
+                <p class="text-xs md:text-sm lg:text-base leading-relaxed">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <span class="text-secondary flex gap-1 mt-2 md:mt-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="keen-slider__slide">
+              <div class="w-[90%] mx-auto">
+                <img
+                  src="/img/testimonialscrowngolden.png"
+                  alt="Feat Crown"
+                  class="w-12 md:w-16 lg:w-20 mx-auto"
+                />
+              </div>
+              <div class="border-2 bg-secondary_light p-3 md:p-4 lg:p-5">
+                <div class="flex gap-4 md:gap-6 py-2 items-center my-2">
+                  <img
+                    class="rounded-full w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+                    src="/img/testimonialprofile.png"
+                    alt="Person 1"
+                  />
+                  <p>
+                    <span
+                      class="block font-semibold font-serif text-base md:text-lg lg:text-xl"
+                      >Mike Taylor</span
+                    >
+                    <span
+                      class="block tracking-wider leading-6 md:leading-7 lg:leading-8 text-sm md:text-base"
+                      >Lahore, Pakistan</span
+                    >
+                  </p>
+                </div>
+                <p class="text-xs md:text-sm lg:text-base leading-relaxed">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <span class="text-secondary flex gap-1 mt-2 md:mt-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="keen-slider__slide">
+              <div class="w-[90%] mx-auto">
+                <img
+                  src="/img/testimonialscrownblack.png"
+                  alt="Feat Crown"
+                  class="w-12 md:w-16 lg:w-20 mx-auto"
+                />
+              </div>
+              <div class="border-2 bg-secondary_light p-3 md:p-4 lg:p-5">
+                <div class="flex gap-4 md:gap-6 py-2 items-center my-2">
+                  <img
+                    class="rounded-full w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+                    src="/img/testimonialprofile.png"
+                    alt="Person 1"
+                  />
+                  <p>
+                    <span
+                      class="block font-semibold font-serif text-base md:text-lg lg:text-xl"
+                      >Mike Taylor</span
+                    >
+                    <span
+                      class="block tracking-wider leading-6 md:leading-7 lg:leading-8 text-sm md:text-base"
+                      >Lahore, Pakistan</span
+                    >
+                  </p>
+                </div>
+                <p class="text-xs md:text-sm lg:text-base leading-relaxed">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <span class="text-secondary flex gap-1 mt-2 md:mt-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star md:w-5 md:h-5 lg:w-6 lg:h-6"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <button
+            id="prev-test"
+            class="bg-white text-secondary absolute rotate-180 -left-3 top-1/2 -translate-y-1/2 -translate-x-[100%] hover:bg-secondary hover:text-white px-2 md:px-3 py-2 shadow text-base md:text-lg"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-right-icon lucide-chevron-right md:w-6 md:h-6"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+          <button
+            id="next-test"
+            class="bg-white absolute -right-3 top-1/2 -translate-y-1/2 translate-x-[100%] text-secondary hover:bg-secondary hover:text-white px-2 md:px-3 py-2 shadow text-base md:text-lg"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-right-icon lucide-chevron-right md:w-6 md:h-6"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="dots-test"
+          class="flex justify-center md:hidden gap-2 mt-4 md:mt-6"
+        ></div>
+      </div>
+
+      <!-- Keen Slider JS -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const slider = new KeenSlider('#my-slider-test', {
+            loop: true,
+            mode: 'snap',
+            slides: {
+              perView: 1,
+              spacing: 12,
+            },
+            breakpoints: {
+              '(min-width: 768px)': {
+                slides: {
+                  perView: 2,
+                  spacing: 16,
+                },
+              },
+              '(min-width: 1024px)': {
+                slides: {
+                  perView: 3,
+                  spacing: 20,
+                },
+              },
+            },
+            created(sliderInstance) {
+              const dotContainer = document.getElementById('dots-test');
+              dotContainer.innerHTML = '';
+              for (
+                let i = 0;
+                i < sliderInstance.track.details.slides.length;
+                i++
+              ) {
+                const dot = document.createElement('button');
+                dot.className =
+                  'w-2 h-2 md:w-3 md:h-3 rounded-full bg-white/30 hover:bg-white transition-all';
+                dot.addEventListener('click', () =>
+                  sliderInstance.moveToIdx(i),
+                );
+                dotContainer.appendChild(dot);
+              }
+              updateActiveDot(sliderInstance);
+              sliderInstance.on('slideChanged', () =>
+                updateActiveDot(sliderInstance),
+              );
+            },
+          });
+
+          function updateActiveDot(sliderInstance) {
+            const dots = document.querySelectorAll('#dots-test button');
+            dots.forEach((dot, idx) => {
+              if (idx === sliderInstance.track.details.rel) {
+                dot.classList.add('bg-white');
+                dot.classList.remove('bg-white/30');
+              } else {
+                dot.classList.remove('bg-white');
+                dot.classList.add('bg-white/30');
+              }
+            });
+          }
+
+          document
+            .getElementById('prev-test')
+            .addEventListener('click', () => slider.prev());
+          document
+            .getElementById('next-test')
+            .addEventListener('click', () => slider.next());
+        });
+      </script>
+    </section>
+
+    <section class="centergrid mx-4 md:mx-0">
+      <!-- Title Prefix -->
+      <p class="titleprefix text-sm sm:text-base md:text-lg lg:text-xl">
+        Our Gallery
+      </p>
+
+      <!-- Heading & Button -->
+      <div class="flex justify-between items-center flex-wrap gap-4">
+        <h2
+          class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-3 font-thin"
+        >
+          Explore Our Nature Cottage
+        </h2>
+        <button
+          class="bg-secondary hidden md:block text-white px-6 lg:px-10 py-2 text-sm md:text-base"
+        >
+          View All
+        </button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div
+        class="grid md:grid-cols-12 grid-cols-2 gap-4 sm:gap-5 pt-10 sm:pt-12 pb-16 sm:pb-20"
+      >
+        <img
+          class="col-start-1 md:col-span-3 w-full object-cover"
+          src="img/featimg-1.png"
+          alt=""
+        />
+        <img
+          class="hidden md:block col-start-4 col-span-6 w-full object-cover"
+          src="img/gallery2.png"
+          alt=""
+        />
+        <img
+          class="md:col-start-10 col-start-2 md:col-span-3 w-full object-cover"
+          src="img/gallery3.png"
+          alt=""
+        />
+        <img
+          class="hidden md:block col-start-1 col-span-4 w-full object-cover"
+          src="img/gallery4.png"
+          alt=""
+        />
+        <img
+          class="hidden md:block col-start-5 col-span-4 w-full object-cover"
+          src="img/gallery5.png"
+          alt=""
+        />
+        <img
+          class="hidden md:block col-start-9 col-span-4 w-full object-cover"
+          src="img/gallery6.png"
+          alt=""
+        />
+
+        <!-- Mobile View All Button -->
+        <button
+          class="bg-secondary md:hidden text-white text-sm sm:text-base px-8 sm:px-10 col-span-full mx-auto py-2 h-max mt-4"
+        >
+          View All
+        </button>
+      </div>
+    </section>
+
+    <!-- /?FORM -->
+    <section
+      class="col-span-full ctabgm border-4 border-black flex p-6 md:gap-32 gap-12 md:flex-row justify-around items-center text-center flex-col-reverse"
+    >
+      <div class="max-w-2xl">
+        <p class="titleprefix">What People says</p>
+        <h2 class="text-4xl font-thin my-3 font-serif text-white">
+          Transform Your Stay With Our Exclusive Packages
+        </h2>
+        <p class="text-white tracking-[0.1em] text-sm leading-[1.5] w-full">
+          Enhance your getaway with our thoughtfully curated packages, whether
+          you're looking for a romantic escape, a family adventure, or a
+          wellness retreat.
+        </p>
+      </div>
+      <div class="bg-secondary_light_2 w-full max-w-md -translate-y-14">
+        <img
+          src="img/ctaformhead.png"
+          alt="CTA Scale"
+          class=""
+        />
+        <div class="px-6">
+          <p class="titleprefix">Reservation</p>
+          <h2 class="text-4xl font-thin my-3 font-serif text-black">
+            Book a Call
+          </h2>
+        </div>
+        <form
+          action=""
+          class="grid grid-cols-2 px-6 gap-4 pb-6"
+        >
+          <input
+            type="text"
+            placeholder="Name"
+            id="name"
+            class="col-span-full inputstyle"
+          />
+          <input
+            type="text"
+            placeholder="Email"
+            id="email"
+            class="col-span-1 inputstyle"
+          />
+          <input
+            type="text"
+            placeholder="Phone"
+            id="phone"
+            class="col-span-1 col-start-2 inputstyle"
+          />
+          <input
+            type="text"
+            placeholder="Cottage Spot"
+            id="cottagespot"
+            class="col-span-full inputstyle"
+          />
+          <input
+            type="text"
+            placeholder="Number of Guests"
+            id="guestno"
+            class="col-span-full inputstyle"
+          />
+          <input
+            type="text"
+            placeholder="Message"
+            id="message"
+            class="col-span-full row-span-2 inputstyle"
+          />
+          <button
+            class="bg-secondary text-white col-span-full mx-auto px-10 py-2 h-max"
+          >
+            Book Now
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer
+      class="bg-primary col-span-full p-6 md:p-12 lg:px-32 lg:py-20 text-white"
+    >
+      <div
+        class="flex flex-col gap-6 md:gap-8 lg:gap-32 md:flex-row items-center md:items-start"
+      >
+        <div class="flex flex-col items-center md:items-start">
+          <img
+            src="img/footerlogo.png"
+            alt="Logo"
+            class="w-24 md:w-32 lg:w-40"
+          />
+          <p
+            class="my-2 text-xs md:text-sm lg:text-base leading-relaxed text-center md:text-left"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio
+            adipisci rem expedita nam reiciendis molestias quaerat sapiente
+            nobis, tempora magnam vel dicta facere officia, in odit eos minus
+            vitae.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 md:gap-5 items-center md:items-start">
+          <h3 class="text-lg md:text-xl lg:text-2xl font-semibold">
+            Information
+          </h3>
+          <div
+            class="flex gap-3 flex-col md:flex-row items-center justify-center"
+          >
+            <img
+              src="/img/address.png"
+              alt="Address"
+              class="w-5 h-5 md:w-6 md:h-6"
+            />
+            <p class="text-xs md:text-sm lg:text-base text-center md:text-left">
+              GXF4+8HQ Chippenham United Kingdom
+            </p>
+          </div>
+          <div
+            class="flex gap-3 flex-col md:flex-row items-center justify-center"
+          >
+            <img
+              src="/img/email.png"
+              alt="Email"
+              class="w-5 h-5 md:w-6 md:h-6"
+            />
+            <p class="text-xs md:text-sm lg:text-base">help.toner@gamil.com</p>
+          </div>
+          <div
+            class="flex gap-3 flex-col md:flex-row items-center justify-center"
+          >
+            <img
+              src="/img/phone.png"
+              alt="Phone"
+              class="w-5 h-5 md:w-6 md:h-6"
+            />
+            <p class="text-xs md:text-sm lg:text-base">+123 (458) 585 568</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-4 md:mb-5">
+            Subscribe
+          </h3>
+          <form
+            action=""
+            class="flex"
+          >
+            <input
+              type="email"
+              placeholder="Enter Email Address"
+              id="subsemail"
+              class="inputstyle py-1 px-3 md:px-4 lg:px-5 text-xs md:text-sm lg:text-base"
+            />
+            <button
+              class="bg-secondary text-white py-1 px-2 md:px-3 lg:px-4 text-xs md:text-sm lg:text-base uppercase whitespace-nowrap"
+            >
+              Subscribe Now
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center gap-4 md:gap-6 my-6 md:my-8">
+        <div class="h-px bg-slate-300 w-full"></div>
+        <div class="flex gap-2 md:gap-3">
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-1.5 md:p-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook-icon lucide-facebook md:w-5 md:h-5 lg:w-6 lg:h-6"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-1.5 md:p-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram-icon lucide-instagram md:w-5 md:h-5 lg:w-6 lg:h-6"
+            >
+              <rect
+                width="20"
+                height="20"
+                x="2"
+                y="2"
+                rx="5"
+                ry="5"
+              />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line
+                x1="17.5"
+                x2="17.51"
+                y1="6.5"
+                y2="6.5"
+              />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-1.5 md:p-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-youtube-icon lucide-youtube md:w-5 md:h-5 lg:w-6 lg:h-6"
+            >
+              <path
+                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+              />
+              <path d="m10 15 5-3-5-3z" />
+            </svg>
+          </a>
+          <a
+            href=""
+            class="border rounded-full hover:bg-secondary p-1.5 md:p-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 30 30"
+              stroke="currentColor"
+              stroke-width="2"
+              class="md:w-5 md:h-5 lg:w-6 lg:h-6"
+            >
+              <path
+                d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="h-px bg-slate-300 w-full"></div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row gap-3 md:gap-0 items-center md:justify-between md:items-start"
+      >
+        <p class="text-xs md:text-sm lg:text-base">
+          Copyright © 2025. All Rights Reserved
+        </p>
+        <div class="flex gap-4 md:gap-6 text-xs md:text-sm lg:text-base">
+          <a href="">FAQ</a>
+          <a href="">Terms of Use</a>
+          <span>|</span>
+          <a href="">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <div
+    id="modal"
+    class="modal hidden"
+  >
+    <div class="modal-content">
+      <span
+        id="close"
+        class="close"
+        >&times;</span
+      >
+      <p id="modal-text"></p>
+    </div>
+  </div>
+  <script>
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modal-text');
+    const close = document.getElementById('close');
+
+    document.querySelectorAll('.open-modal').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.getAttribute('data-content');
+        modalText.innerHTML = content; // Use innerHTML for HTML content
+        modal.classList.remove('hidden');
+      });
+    });
+
+    close.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+  </script>
+</html>

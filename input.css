@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gridcontainer {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @apply w-full h-full;
+
+  z-index: -10;
+  opacity: 0.8;
+  overflow: hidden;
+}
+
+.herobgm {
+  height: 93vh;
+  background-image: linear-gradient(rgb(16, 26, 14, 0.5)),
+    url(/img/hero-bgm.jpg);
+  background-size: cover;
+  background-position: top;
+  @apply md:hidden;
+}
+
+.titleprefix {
+  @apply text-secondary font-thin text-sm uppercase leading-5 tracking-[.1rem];
+}
+
+.featurebgm {
+  background-image: url(/img/featuredbgm.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.roomsbgm {
+  @apply bg-none; /* mobile: no background */
+}
+
+@media (min-width: 768px) {
+  .roomsbgm {
+    background-image: url('/img/roomsbgm.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.facilitiesbgm {
+  background-image: url(/img/facilitiesbgm.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.centergrid {
+  grid-column: 1 / -1; /* Full width on mobile */
+}
+
+@media (min-width: 768px) {
+  .centergrid {
+    grid-column: center-start / center-end;
+  }
+}
+
+.ctabgm {
+  background-image: linear-gradient(rgb(16, 26, 14, 0.5)), url(/img/ctabgm.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inputstyle {
+  @apply border focus:outline-none py-2 text-secondary placeholder:text-secondary px-2;
+}
+
+/* ////////////////////// */
+
+/* Hide by default */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.modal-content h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}

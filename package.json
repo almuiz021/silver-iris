@@ -1,0 +1,21 @@
+{
+  "name": "silver-iris",
+  "version": "1.0.0",
+  "description": "landing page for silver iris",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tailwindcss -i ./input.css -o ./css/style.css --watch",
+    "build": "tailwindcss -i ./input.css -o ./css/style.css",
+    "start": "concurrently \"npm run watch\" \"live-server\""
+  },
+  "author": "Abdulmuiz Ghori",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "keen-slider": "^6.8.6",
+    "live-server": "^1.2.2"
+  }
+}
