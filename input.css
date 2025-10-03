@@ -11,7 +11,7 @@
     [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-.bg-video {
+/* .bg-video {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,8 +28,8 @@
     url(/img/hero-bgm.jpg);
   background-size: cover;
   background-position: top;
-  @apply md:hidden;
-}
+  @apply md:hidden block;
+} */
 
 .titleprefix {
   @apply text-secondary font-thin text-sm uppercase leading-5 tracking-[.1rem];
