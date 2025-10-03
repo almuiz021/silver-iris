@@ -11,26 +11,6 @@
     [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-/* .bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  @apply w-full h-full;
-
-  z-index: -10;
-  opacity: 0.8;
-  overflow: hidden;
-}
-
-.herobgm {
-  height: 93vh;
-  background-image: linear-gradient(rgb(16, 26, 14, 0.5)),
-    url(/img/hero-bgm.jpg);
-  background-size: cover;
-  background-position: top;
-  @apply md:hidden block;
-} */
-
 .titleprefix {
   @apply text-secondary font-thin text-sm uppercase leading-5 tracking-[.1rem];
 }

@@ -32,7 +32,7 @@
     />
     <title>Silver Iris</title>
   </head>
-  <body class="gridcontainer relative">
+  <body class="gridcontainer relative max-w-[1920px] mx-auto">
     <!-- //ANNOUNCEMENT BAR -->
     <section class="col-span-full md:block hidden">
       <article
@@ -436,7 +436,7 @@
       class="relative w-full h-screen col-span-full scroll-mt-[5rem]"
     >
       <video
-        class="absolute top-0 left-0 w-full h-full object-cover opacity-80 z-[-1]"
+        class="absolute top-0 left-0 w-full h-full object-cover opacity-80 z-[-2]"
         autoplay
         muted
         loop
@@ -448,6 +448,11 @@
         />
         Your browser does not support the video tag.
       </video>
+
+      <!-- Black overlay -->
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-black opacity-30 z-[-1]"
+      ></div>
 
       <!-- Hero Section Content -->
       <div
@@ -534,7 +539,7 @@
 
       <!-- Text Content -->
       <div
-        class="basis-full md:basis-[65%] flex flex-col max-w-5xl items-start"
+        class="basis-full md:basis-[65%] flex flex-col max-w-5xl items-center md:items-start"
       >
         <div class="mb-4">
           <img
@@ -642,7 +647,7 @@
         class="roomsbgm basis-[35%] flex justify-center md:my-32 mt-8 md:mx-0 sm:mx-16 my-0"
       >
         <div
-          class="text-white md:text-black md:mx-16 mx-6 flex flex-col items-center md:items-stretch"
+          class="text-white md:text-black md:mx-16 mx-6 flex flex-col items-center md:items-start text-center md:text-left"
         >
           <div class="mb-4">
             <img
@@ -1159,6 +1164,7 @@
       </div>
     </section>
 
+    <!-- /FACILITIES -->
     <section
       id="facilities"
       class="centergrid scroll-mt-[5rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center py-8 md:py-16 lg:py-32 facilitiesbgm mx-4"
@@ -1352,6 +1358,7 @@
       </div>
     </section>
 
+    <!-- /TESTIMONIALS -->
     <section
       id="testimonials"
       class="centergrid scroll-mt-[5rem] grid grid-cols-1 gap-4 items-center pb-8 md:pb-16 lg:pb-32 mt-5 md:-mt-5"
@@ -1385,7 +1392,7 @@
                 <img
                   src="/img/testimonialscrownblack.png"
                   alt="Feat Crown"
-                  class="w-12 md:w-16 lg:w-20 mx-auto"
+                  class="w-full mx-auto"
                 />
               </div>
               <div class="border-2 bg-secondary_light p-3 md:p-4 lg:p-5">
@@ -1499,7 +1506,7 @@
                 <img
                   src="/img/testimonialscrowngolden.png"
                   alt="Feat Crown"
-                  class="w-12 md:w-16 lg:w-20 mx-auto"
+                  class="w-full mx-auto"
                 />
               </div>
               <div class="border-2 bg-secondary_light p-3 md:p-4 lg:p-5">
@@ -1613,7 +1620,7 @@
                 <img
                   src="/img/testimonialscrownblack.png"
                   alt="Feat Crown"
-                  class="w-12 md:w-16 lg:w-20 mx-auto"
+                  class="w-full mx-auto"
                 />
               </div>
               <div class="border-2 bg-secondary_light p-3 md:p-4 lg:p-5">
@@ -1840,17 +1847,22 @@
       </script>
     </section>
 
+    <!-- /GALLERY -->
     <section
       id="cottages"
       class="centergrid scroll-mt-[5rem] mx-4 md:mx-0"
     >
       <!-- Title Prefix -->
-      <p class="titleprefix text-sm sm:text-base md:text-lg lg:text-xl">
+      <p
+        class="titleprefix text-sm sm:text-base md:text-lg lg:text-xl text-center md:text-left"
+      >
         Our Gallery
       </p>
 
       <!-- Heading & Button -->
-      <div class="flex justify-between items-center flex-wrap gap-4">
+      <div
+        class="flex justify-between items-center flex-wrap gap-4 text-center md:text-left"
+      >
         <h2
           class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-3 font-thin"
         >
@@ -1907,10 +1919,10 @@
       </div>
     </section>
 
-    <!-- /?FORM -->
+    <!-- /FORM -->
     <section
       id="contact"
-      class="col-span-full scroll-mt-[5rem] ctabgm border-4 border-black flex p-6 md:gap-32 gap-12 md:flex-row justify-around items-center text-center flex-col-reverse"
+      class="col-span-full scroll-mt-[5rem] ctabgm border-4 border-black flex p-6 md:gap-32 gap-12 md:flex-row justify-around items-center text-center md:text-left flex-col-reverse"
     >
       <div class="max-w-2xl">
         <p class="titleprefix">What People says</p>
@@ -2009,6 +2021,7 @@
       </div>
     </section>
 
+    <!-- /FOOTER -->
     <footer
       class="bg-primary scroll-mt-[5rem] col-span-full p-6 md:p-12 lg:px-32 lg:py-20 text-white"
     >
@@ -2209,6 +2222,7 @@
     </footer>
   </body>
 
+  <!-- /MODAL -->
   <div
     id="modal"
     class="modal hidden"
@@ -2222,6 +2236,26 @@
       <p id="modal-text"></p>
     </div>
   </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modal-text');
+    const close = document.getElementById('close');
+
+    document.querySelectorAll('.open-modal').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.getAttribute('data-content');
+        modalText.innerHTML = content; // Use innerHTML for HTML content
+        modal.classList.remove('hidden');
+      });
+    });
+
+    close.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+  </script>
+
+  <!-- /WHATSAPP -->
 
   <a
     href="https://wa.me/1234567890"
@@ -2262,22 +2296,4 @@
       ></path>
     </svg>
   </a>
-
-  <script>
-    const modal = document.getElementById('modal');
-    const modalText = document.getElementById('modal-text');
-    const close = document.getElementById('close');
-
-    document.querySelectorAll('.open-modal').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const content = btn.getAttribute('data-content');
-        modalText.innerHTML = content; // Use innerHTML for HTML content
-        modal.classList.remove('hidden');
-      });
-    });
-
-    close.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-  </script>
 </html>
